@@ -1,8 +1,6 @@
-
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Benefits } from "@/components/Benefits";
-import { Footer } from "@/components/Footer";
 
 export default function Index() {
   return (
@@ -12,7 +10,6 @@ export default function Index() {
         <Features />
         <Benefits />
       </main>
-      <Footer />
     </div>
   );
 }
