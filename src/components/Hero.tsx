@@ -1,9 +1,13 @@
 
 import { InputWithButton } from "./ui/input-with-button";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Hero() {
   return (
-    <section className="py-20 px-4 text-center">
+    <section className="py-20 px-4 text-center relative">
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
       <div className="max-w-3xl mx-auto space-y-8">
         <h1 className="text-5xl font-bold tracking-tight animate-fade-in">
           Notes that think with you
