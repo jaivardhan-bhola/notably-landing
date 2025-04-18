@@ -119,6 +119,24 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-6 sm:mb-10">
             <InputWithButton />
+            
+            {/* Product Hunt Badge */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="mt-4 sm:mt-0"
+            >
+              <a href="https://www.producthunt.com/posts/notably-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notably&#0045;5" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=light&t=1744989901290" 
+                  alt="Notably - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt" 
+                  width="250" 
+                  height="54" 
+                  className="hover:opacity-90 transition-opacity"
+                />
+              </a>
+            </motion.div>
           </div>
           
           {/* Feature Highlights - Responsive grid on mobile */}
