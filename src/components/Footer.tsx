@@ -1,89 +1,36 @@
-import { Github, Twitter, Linkedin, Sparkles, ArrowUpRight, Mail, MapPin } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
-
-const footerLinks = [
-  {
-    title: "Product",
-    links: [
-      { text: "Features", href: "#" },
-      { text: "Roadmap", href: "#" },
-      { text: "Beta Program", href: "#" },
-      { text: "Pricing", href: "#" },
-    ]
-  },
-  {
-    title: "Resources",
-    links: [
-      { text: "Documentation", href: "#" },
-      { text: "Guides", href: "#" },
-      { text: "API", href: "#" },
-      { text: "Support", href: "#" },
-    ]
-  },
-  {
-    title: "Company",
-    links: [
-      { text: "About", href: "#" },
-      { text: "Blog", href: "#" },
-      { text: "Careers", href: "#" },
-      { text: "Press Kit", href: "#" },
-    ]
-  },
-  {
-    title: "Legal",
-    links: [
-      { text: "Privacy", href: "#" },
-      { text: "Terms", href: "#" },
-      { text: "Cookie Policy", href: "#" },
-      { text: "Licenses", href: "#" },
-    ]
-  }
-];
+import { VisitorCounter } from "./ui/visitor-counter";
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@notably.ai", label: "Email" }
+  { 
+    icon: () => (
+      <svg width="16" height="16" viewBox="0 0 40 40" fill="currentColor">
+        <g>
+          <path d="M20,0C8.956,0,0,8.956,0,20s8.956,20,20,20s20-8.956,20-20S31.044,0,20,0z M20,36.2c-8.944,0-16.2-7.256-16.2-16.2S11.056,3.8,20,3.8S36.2,11.056,36.2,20S28.944,36.2,20,36.2z"/>
+          <path d="M22.12,14.496h-5.888V25.84h3.92v-4.4h1.968c2.816,0,5.152-2.304,5.152-5.472C27.272,13.408,25.936,14.496,22.12,14.496z M22.224,18.337h-2.072v-1.184h2.072c0.88,0,1.568,0.24,1.568,0.592C23.792,18.098,23.104,18.337,22.224,18.337z"/>
+        </g>
+      </svg>
+    ), 
+    href: "https://www.producthunt.com/products/notably-3", 
+    label: "Product Hunt" 
+  },
+  { 
+    icon: Instagram, 
+    href: "https://www.instagram.com/notably.ai/", 
+    label: "Instagram" 
+  }
 ];
 
 export function Footer() {
   return (
-    <footer className="relative pt-32 pb-16 px-4 overflow-hidden bg-black dark:bg-[#0a0a0a] text-white">
-      {/* Enhanced Gradient Background */}
+    <footer className="relative py-6 px-4 overflow-hidden bg-black dark:bg-[#0a0a0a] text-white">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-black/80 to-black opacity-50 blur-3xl" />
         <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl" />
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl" />
       </div>
       
-      {/* Top section with newsletter */}
-      <div className="relative z-10 max-w-7xl mx-auto mb-24">
-        <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
-          <div className="lg:w-1/2 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-              Stay in the loop
-            </h2>
-            <p className="text-gray-400 text-lg max-w-xl">
-              Subscribe to our newsletter for the latest product updates, tips, and AI note-taking insights.
-            </p>
-          </div>
-          <div className="lg:w-1/2 flex flex-col sm:flex-row gap-3 w-full max-w-md">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-primary/50 flex-1"
-            />
-            <Button className="group">
-              Subscribe
-              <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-            </Button>
-          </div>
-        </div>
-      </div>
-      
-      {/* Main footer content */}
       <motion.div 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -91,52 +38,11 @@ export function Footer() {
         viewport={{ once: true }}
         className="relative z-10 max-w-7xl mx-auto"
       >
-        {/* Links section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 lg:gap-16 mb-16 border-b border-white/10 pb-16">
-          {/* Company info */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-purple-700 flex items-center justify-center">
-                <Sparkles className="w-4 h-4 text-white" />
-              </div>
-              <h3 className="text-xl font-bold bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-                Notably
-              </h3>
-            </div>
-            <p className="text-gray-400 text-sm mb-6">
-              Transform your note-taking experience with AI-powered intelligence and intuitive organization.
-            </p>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <MapPin className="w-4 h-4" />
-              <span>San Francisco, CA</span>
-            </div>
-          </div>
-          
-          {/* Navigation links */}
-          {footerLinks.map((column) => (
-            <div key={column.title}>
-              <h4 className="font-medium text-white mb-4">{column.title}</h4>
-              <ul className="space-y-3">
-                {column.links.map((link) => (
-                  <li key={link.text}>
-                    <a 
-                      href={link.href} 
-                      className="text-gray-400 hover:text-primary text-sm flex items-center group"
-                    >
-                      {link.text}
-                      <ArrowUpRight className="ml-1.5 h-3 w-3 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        
-        {/* Bottom section */}
+        {/* Bottom section with copyright and visitor counter */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Notably. All rights reserved.
+          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
+            <div>© {new Date().getFullYear()} Notably. All rights reserved.</div>
+            <VisitorCounter className="mt-2 md:mt-0 md:ml-4" />
           </div>
           
           <div className="flex gap-3">
