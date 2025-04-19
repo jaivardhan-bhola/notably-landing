@@ -15,6 +15,7 @@
 [functions]
   directory = "netlify/functions"
 
-# Enable KV store
-[[plugins]]
-  package = "@netlify/plugin-gatsby-cache"
+# Enable Netlify Blobs for data persistence
+[[edge_functions]]
+  function = "visitor-count"
+  path = "/.netlify/functions/visitor-count"
