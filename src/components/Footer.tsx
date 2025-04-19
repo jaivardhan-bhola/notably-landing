@@ -1,6 +1,5 @@
 import { Instagram } from "lucide-react";
 import { motion } from "framer-motion";
-import { VisitorCounter } from "./ui/visitor-counter";
 
 const socialLinks = [
   { 
@@ -38,11 +37,10 @@ export function Footer() {
         viewport={{ once: true }}
         className="relative z-10 max-w-7xl mx-auto"
       >
-        {/* Bottom section with copyright and visitor counter */}
+        {/* Bottom section with copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
             <div>© {new Date().getFullYear()} Notably. All rights reserved.</div>
-            <VisitorCounter className="mt-2 md:mt-0 md:ml-4" />
           </div>
           
           <div className="flex gap-3">

@@ -9,11 +9,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Configure Edge Functions for the visitor counter
-[[edge_functions]]
-  path = "/api/visitor-count"
-  function = "visitor-count"
-
-[blobs]
-  serve_origin = "visitor-count"
