@@ -23,8 +23,8 @@ export function VisitorCounter({ className }: VisitorCounterProps) {
       try {
         setLoading(true);
         
-        // Send a POST request to increment the counter
-        const response = await fetch(`${getBaseUrl()}/.netlify/functions/visitor-count`, {
+        // Send a POST request to increment the counter using the Edge Function
+        const response = await fetch(`${getBaseUrl()}/api/visitor-count`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export function VisitorCounter({ className }: VisitorCounterProps) {
 
     const getCountWithoutIncrementing = async () => {
       try {
-        const response = await fetch(`${getBaseUrl()}/.netlify/functions/visitor-count`, {
+        const response = await fetch(`${getBaseUrl()}/api/visitor-count`, {
           method: 'GET',
         });
         

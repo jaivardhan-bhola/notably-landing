@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "netlify/functions"
   
 [build.environment]
   NODE_VERSION = "18" # You can adjust this to match your Node.js version
@@ -11,11 +10,10 @@
   to = "/index.html"
   status = 200
 
-# Enable Netlify Edge Functions
-[functions]
-  directory = "netlify/functions"
-
-# Enable Netlify Blobs for data persistence
+# Configure Edge Functions for the visitor counter
 [[edge_functions]]
+  path = "/api/visitor-count"
   function = "visitor-count"
-  path = "/.netlify/functions/visitor-count"
+
+[blobs]
+  serve_origin = "visitor-count"
