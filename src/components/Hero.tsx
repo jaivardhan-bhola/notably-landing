@@ -129,7 +129,7 @@ export function Hero() {
             >
               <a href="https://www.producthunt.com/posts/notably-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notably&#0045;5" target="_blank" rel="noopener noreferrer">
                 <img 
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=light&t=1744989901290" 
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=dark&t=1745053161436" 
                   alt="Notably - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt" 
                   width="250" 
                   height="54" 
