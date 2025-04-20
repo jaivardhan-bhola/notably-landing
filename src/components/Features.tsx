@@ -66,7 +66,7 @@ export function Features() {
                 <span className="bg-primary rounded-full w-3 h-3 animate-pulse"></span>
                 <span className="text-sm font-medium">AI-powered features</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+              <h2 className="font-ntype text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
                 <span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Notably's</span> next-level productivity tools
               </h2>
               <p className="text-xl text-gray-300 mb-6 max-w-xl">

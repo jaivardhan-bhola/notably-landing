@@ -34,7 +34,7 @@ export function CTA() {
             <span className="text-sm font-medium">Limited time offer</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+          <h2 className="font-ntype text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
             Get early access today
           </h2>
           

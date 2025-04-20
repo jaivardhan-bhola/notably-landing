@@ -37,7 +37,7 @@ export function Header() {
           <div className="h-8 w-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xl">N</span>
           </div>
-          <span className={`font-bold text-xl ${isScrolled ? "text-foreground" : "text-white"}`}>
+          <span className={`font-ntype font-bold text-xl ${isScrolled ? "text-foreground" : "text-white"}`}>
             Notably
           </span>
         </Link>

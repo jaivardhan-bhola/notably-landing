@@ -100,7 +100,7 @@ export function Hero() {
             <span className="text-xs sm:text-sm font-medium">Next generation note-taking</span>
           </div>
           
-          <h1 className="font-ntype text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent leading-tight">
+          <h1 className="font-ntype text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent leading-relaxed pb-2">
             <span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Notably:</span> Notes that <span className="relative inline-block min-w-[3ch] min-h-[1.2em]">
               <span className="text-primary">{displayText}</span>
               <span className="text-primary animate-blink ml-1">|</span>
@@ -125,9 +125,13 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="mt-4 sm:mt-0"
+              className="flex justify-center sm:justify-start mt-6 sm:mt-0"
             >
-              <a href="https://www.producthunt.com/posts/notably-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notably&#0045;5" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.producthunt.com/posts/notably-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notably&#0045;5" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="transform hover:scale-105 transition-transform duration-300"
+              >
                 <img 
                   src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=dark&t=1745053161436" 
                   alt="Notably - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt" 

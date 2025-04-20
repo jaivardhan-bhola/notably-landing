@@ -18,9 +18,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        ntype: ['NType82', 'system-ui', 'sans-serif'],
-        sans: ['Inter var', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['NType82', 'Inter var', 'system-ui', 'sans-serif'],
+        ntype: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontSize: {

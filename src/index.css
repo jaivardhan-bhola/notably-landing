@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS variables and base styles */
 @layer base {
   :root {
     /* Use dark theme values directly in root */
@@ -32,6 +33,6 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
   }
 }

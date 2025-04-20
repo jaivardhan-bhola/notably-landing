@@ -52,7 +52,7 @@ export function Benefits() {
               <span>Under Development</span>
             </Badge>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+            <h2 className="font-ntype text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
               <span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Notably</span> benefits <br />coming soon
             </h2>
             
