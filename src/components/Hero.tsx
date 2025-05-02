@@ -146,16 +146,20 @@ export function Hero() {
           {/* Feature Highlights - Responsive grid on mobile */}
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-6 text-xs sm:text-sm text-gray-400">
             <div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
-              <Zap className="w-4 h-4 text-primary" />
-              <span>AI-Powered</span>
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span>Instant AI Summaries</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
               <Layers className="w-4 h-4 text-primary" />
-              <span>Smart Organization</span>
+              <span>Automatic Tagging</span>
             </div>
             <div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
               <Code className="w-4 h-4 text-primary" />
-              <span>Seamless Integration</span>
+              <span>Voice Capture</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
+              <Zap className="w-4 h-4 text-primary" />
+              <span>Tasks & Calendar</span>
             </div>
           </div>
         </div>

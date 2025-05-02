@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
@@ -18,6 +18,11 @@ const socialLinks = [
     icon: Instagram, 
     href: "https://www.instagram.com/notably.ai/", 
     label: "Instagram" 
+  },
+  { 
+    icon: Linkedin, 
+    href: "https://www.linkedin.com/company/notably-ai-india/", 
+    label: "LinkedIn" 
   }
 ];
 

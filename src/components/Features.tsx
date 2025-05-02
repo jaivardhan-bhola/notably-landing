@@ -1,36 +1,36 @@
-import { Brain, Search, FileText, Link2, MessageSquare, ArrowRight, Tag } from "lucide-react";
+import { Brain, Search, FileText, Link2, MessageSquare, ArrowRight, Tag, Calendar, Mic, ListTodo, Sparkles, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 const features = [
   {
-    icon: Brain,
-    title: "Auto-summarize long notes",
-    description: "Instantly distill lengthy documents and meeting notes into concise, actionable takeaways.",
-  },
-  {
-    icon: Search,
-    title: "Smart search (semantic)",
-    description: "Find relevant information based on concepts and meaning, not just keywords or exact phrases.",
+    icon: Sparkles,
+    title: "AI Summarization",
+    description: "Instantly condense long notes into concise, clear overviews — perfect for review and recall.",
   },
   {
     icon: Tag,
-    title: "Auto-tagging and categorization",
-    description: "AI automatically organizes your notes with relevant tags and categories for effortless retrieval.",
+    title: "Auto Tagging",
+    description: "Let Notably understand your notes and categorize them automatically for effortless organization.",
   },
   {
-    icon: Link2,
-    title: "Auto-linking related notes",
-    description: "Discover connections between your ideas as the system automatically links related content.",
+    icon: Mic,
+    title: "Voice to Text",
+    description: "Capture ideas on the go — speak naturally and let Notably turn it into clean, searchable notes.",
   },
   {
-    icon: FileText,
-    title: "Generate notes from audio/video",
-    description: "Convert recordings of meetings, lectures, and interviews into structured, searchable notes.",
+    icon: CheckCircle,
+    title: "Notes to Subtasks",
+    description: "Highlight key actions in your notes and convert them directly into actionable tasks.",
+  },
+  {
+    icon: Calendar,
+    title: "Calendar Integration",
+    description: "Turn tasks into scheduled events, helping you move from idea → execution without switching apps.",
   },
   {
     icon: MessageSquare,
-    title: "Chat with your notes",
+    title: "Chat with notes",
     description: "Ask questions and get answers derived directly from your knowledge base and personal notes.",
   },
 ];
