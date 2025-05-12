@@ -1,5 +1,6 @@
 import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // Added import
 
 const socialLinks = [
   { 
@@ -46,6 +47,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
             <div>© {new Date().getFullYear()} Notably. All rights reserved.</div>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link> {/* Added link */} 
           </div>
           
           <div className="flex gap-3">
