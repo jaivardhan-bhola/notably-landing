@@ -79,6 +79,25 @@ export default function PrivacyPolicy() {
             </li>
           </ul>
         </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Data Sharing and Disclosure</h2>
+          <ul className="list-disc list-inside text-muted-foreground space-y-2">
+            <li>We do not sell, rent, or share your personal data with third parties except as necessary to provide Notably’s core services, comply with the law, or protect our rights.</li>
+            <li>We may share your data with trusted service providers (such as Appwrite for authentication and storage) strictly for the purpose of operating and improving Notably. These providers are contractually obligated to protect your information and use it only for the services we request.</li>
+            <li>We do not transfer your data internationally except as required for service operation, and always in compliance with applicable data protection laws.</li>
+            <li>We do not share your Google user data with any third parties except as required to provide the features you explicitly request (such as creating calendar events you approve).</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Use of Google Workspace APIs and Data</h2>
+          <ul className="list-disc list-inside text-muted-foreground space-y-2">
+            <li>Notably’s use and transfer of information received from Google APIs to any other app will adhere to Google API Services User Data Policy, including the Limited Use requirements.</li>
+            <li>We do not use data obtained from Google Workspace APIs to develop, improve, or train generalized artificial intelligence (AI) or machine learning (ML) models.</li>
+            <li>Google user data is only used to provide the specific features you request (such as creating calendar events) and is not used for any other purpose.</li>
+          </ul>
+        </section>
       </main>
       <Footer />
     </div>
