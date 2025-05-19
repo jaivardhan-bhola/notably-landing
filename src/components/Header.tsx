@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "./ui/button";
 import { Menu, X, Github } from "lucide-react";
+
+// Google Form URL
+const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,40 +34,37 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">N</span>
-          </div>
-          <span className={`font-ntype font-bold text-xl ${isScrolled ? "text-foreground" : "text-white"}`}>
-            Notably
-          </span>
-        </Link>
+        {/* Empty left section to maintain spacing */}
+        <div></div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-6">
-            {["Features", "About", "Pricing", "Blog"].map((item) => (
-              <a
+            {["Home", "Pricing"].map((item) => (
+              <Link
                 key={item}
-                href="#"
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className={`text-sm font-medium transition-colors ${
                   isScrolled ? "text-muted-foreground hover:text-foreground" : "text-gray-300 hover:text-white"
                 }`}
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <Button variant="default" size="sm">Get Early Access</Button>
+          <div className="flex items-center">
+            <Button 
+              variant="default" 
+              size="sm" 
+              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+            >
+              Get Early Access
+            </Button>
           </div>
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 md:hidden">
-          <ThemeToggle />
+        <div className="flex items-center md:hidden">
           <Button 
             variant="ghost" 
             size="icon"
@@ -87,17 +86,25 @@ export function Header() {
             className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
           >
             <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">
-              {["Features", "About", "Pricing", "Blog"].map((item) => (
-                <a
+              {["Home", "Pricing"].map((item) => (
+                <Link
                   key={item}
-                  href="#"
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="text-lg font-medium py-2 border-b border-border/30 text-foreground"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}
-                </a>
+                </Link>
               ))}
-              <Button className="mt-4 w-full">Get Early Access</Button>
+              <Button 
+                className="mt-4 w-full"
+                onClick={() => {
+                  window.open(GOOGLE_FORM_URL, '_blank');
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Get Early Access
+              </Button>
               <div className="flex items-center justify-between pt-4 border-t border-border/30 mt-2">
                 <span className="text-sm text-muted-foreground">© 2025 Notably</span>
                 <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">
