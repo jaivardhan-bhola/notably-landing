@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, X} from "lucide-react";
 
 // Google Form URL
 const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
@@ -105,12 +105,6 @@ export function Header() {
               >
                 Get Early Access
               </Button>
-              <div className="flex items-center justify-between pt-4 border-t border-border/30 mt-2">
-                <span className="text-sm text-muted-foreground">© 2025 Notably</span>
-                <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Github size={18} />
-                </a>
-              </div>
             </div>
           </motion.div>
         )}
