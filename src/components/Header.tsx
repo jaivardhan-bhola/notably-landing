@@ -58,7 +58,7 @@ export function Header() {
               size="sm" 
               onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
             >
-              Get Early Access
+              Join the beta waitlist
             </Button>
           </div>
         </nav>
@@ -103,7 +103,7 @@ export function Header() {
                   setIsMobileMenuOpen(false);
                 }}
               >
-                Get Early Access
+                Join the beta waitlist
               </Button>
             </div>
           </motion.div>

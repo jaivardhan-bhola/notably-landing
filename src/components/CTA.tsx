@@ -31,15 +31,14 @@ export function CTA() {
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
             <span className="bg-primary rounded-full w-3 h-3 animate-pulse"></span>
-            <span className="text-sm font-medium">Limited time offer</span>
+            <span className="text-sm font-medium">Beta opens June 2025</span>
           </div>
           
           <h2 className="font-ntype text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-            Get early access today
+            Get on the list. Don’t miss out.
           </h2>
-          
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Join our exclusive beta and experience how Notably transforms note-taking with AI summarization, automatic tagging, voice-to-text, and seamless task and calendar integration.
+            Notably is almost here. Sign up for early access and get perks you’ll brag about later.
           </p>
           
           <div className="max-w-md mx-auto mb-10">
@@ -48,22 +47,16 @@ export function CTA() {
           
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <div className="flex items-center">
-              <svg className="w-5 h-5 mr-1.5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span>Instant note summaries</span>
+              <span role="img" aria-label="sparkles"></span>
+              <span className="ml-2">Instant summaries</span>
             </div>
             <div className="flex items-center">
-              <svg className="w-5 h-5 mr-1.5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span>Voice-to-text capture</span>
+              <span role="img" aria-label="microphone"></span>
+              <span className="ml-2">Voice-to-note</span>
             </div>
             <div className="flex items-center">
-              <svg className="w-5 h-5 mr-1.5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
-              </svg>
-              <span>Notes → Tasks → Calendar</span>
+              <span role="img" aria-label="lightning"></span>
+              <span className="ml-2">Notes → Tasks → Calendar</span>
             </div>
           </div>
         </motion.div>

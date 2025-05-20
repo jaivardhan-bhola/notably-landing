@@ -22,15 +22,14 @@ export function InputWithButton({ placeholder = "Enter your email" }) {
     <div className="flex flex-col w-full max-w-sm gap-2 relative">
       <div className="flex items-center text-amber-500 text-sm mb-2 animate-pulse">
         <AlertCircle className="h-4 w-4 mr-1" />
-        <span>Waitlist filling soon — secure your spot now!</span>
+        <span> Beta launching June 2025 — secure your spot now!</span>
       </div>
       <Button 
         onClick={handleRedirect}
         className="w-full relative overflow-hidden group transition-all duration-300"
       >
         <span className="flex items-center justify-center">
-          Join Our Waitlist
-          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          Join the beta waitlist
         </span>
       </Button>
     </div>
