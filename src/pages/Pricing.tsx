@@ -151,7 +151,7 @@ export default function Pricing() {
             </p>
             <Button 
               size="lg" 
-              onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+              onClick={() => window.open('mailto:notablyai@gmail.com', '_blank')}
             >
               Contact Sales
             </Button>
