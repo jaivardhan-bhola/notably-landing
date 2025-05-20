@@ -16,6 +16,7 @@ const plans = [
     description: "Perfect for getting started with Notably",
     price: "Free",
     features: [
+      "50 notes",
       "10 summaries per week",
       "10 subtask creations per day",
       "50 chat messages per day",
@@ -29,9 +30,11 @@ const plans = [
     description: "For power users who need more",
     price: "$3",
     features: [
+      "250 notes",
       "25 summaries per week",
       "25 subtask creations per day",
       "100 chat messages per day",
+      "Auto Tagging",
       "Priority customer support",
     ],
     buttonText: "Subscribe Now",
@@ -42,9 +45,11 @@ const plans = [
     description: "For teams and professionals who need the best",
     price: "$5",
     features: [
+      "Unlimited Notes",
       "50 summaries per week",
       "50 subtask creations per day",
       "250 chat messages per day",
+      "Auto Tagging",
       "24/7 premium support",
     ],
     buttonText: "Go Pro",
@@ -135,15 +140,6 @@ export default function Pricing() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter>
-                  <Button 
-                    className="w-full" 
-                    variant={plan.highlighted ? "default" : "outline"}
-                    onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-                  >
-                    {plan.buttonText}
-                  </Button>
-                </CardFooter>
               </Card>
             ))}
           </motion.div>
