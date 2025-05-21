@@ -45,12 +45,8 @@ export function HowItWorks() {
 	return (
 		<section
 			id="how-it-works"
-			className="relative py-32 px-4 overflow-hidden bg-[#0a0a0a] text-white"
+			className="relative py-32 px-4 overflow-hidden text-white rounded-2xl"
 		>
-			<div className="absolute inset-0">
-				<div className="absolute inset-0 bg-gradient-to-tl from-purple-900/20 via-black/60 to-blue-900/20 opacity-40 blur-3xl" />
-				<div className="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black/80 to-transparent" />
-			</div>
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}

@@ -24,24 +24,7 @@ const benefits = [
 
 export function Benefits() {
 	return (
-		<section className="relative py-36 px-4 overflow-hidden bg-[#0a0a0a] text-white">
-			{/* Enhanced Gradient Background */}
-			<div className="absolute inset-0">
-				<div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black/60 to-purple-900/20 opacity-40 blur-3xl" />
-				<div
-					className="absolute top-1/3 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse"
-					style={{ animationDuration: "8s" }}
-				/>
-				<div
-					className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse"
-					style={{ animationDuration: "10s", animationDelay: "1s" }}
-				/>
-			</div>
-
-			{/* Decorative Elements */}
-			<div className="absolute top-20 right-[10%] w-60 h-60 border border-blue-500/10 rounded-full" />
-			<div className="absolute bottom-20 left-[20%] w-40 h-40 border border-purple-500/10 rounded-full" />
-
+		<section className="relative py-36 px-4 overflow-hidden text-white">
 			{/* Content */}
 			<div className="relative z-10 max-w-7xl mx-auto">
 				<div className="flex flex-col lg:flex-row items-center gap-16">
@@ -105,9 +88,6 @@ export function Benefits() {
 						className="lg:w-1/2"
 					>
 						<div className="relative">
-							{/* Decorative Dots Background */}
-							<div className="absolute -inset-10 bg-[radial-gradient(#8b5cf6_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
-
 							{/* Glass Card */}
 							<div className="relative bg-gradient-to-br from-white/5 to-white/2 rounded-2xl border border-white/10 p-1 backdrop-blur-sm shadow-[0_0_60px_-15px_rgba(139,92,246,0.25)]">
 								<div className="bg-black/40 rounded-xl p-8">
@@ -159,10 +139,6 @@ export function Benefits() {
 									</div>
 								</div>
 							</div>
-
-							{/* Decorative Elements */}
-							<div className="absolute -top-6 -right-6 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-md border border-primary/20"></div>
-							<div className="absolute -bottom-8 -left-4 w-16 h-16 rounded-full bg-blue-500/10 backdrop-blur-md border border-blue-500/10"></div>
 						</div>
 					</motion.div>
 				</div>
