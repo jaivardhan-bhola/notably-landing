@@ -1,4 +1,4 @@
-// filepath: /home/jai/Code/Notably/landing/src/pages/Pricing.tsx
+// filepath: /home/jai/Code/Pensa/landing/src/pages/Pricing.tsx
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTA } from "@/components/CTA";
@@ -13,7 +13,7 @@ const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
 const plans = [
   {
     name: "Free",
-    description: "Perfect for getting started with Notably",
+    description: "Perfect for getting started with Pensa",
     price: "Free",
     features: [
       "50 notes",
@@ -151,7 +151,7 @@ export default function Pricing() {
             </p>
             <Button 
               size="lg" 
-              onClick={() => window.open('mailto:notablyai@gmail.com', '_blank')}
+              onClick={() => window.open('mailto:Pensaai@gmail.com', '_blank')}
             >
               Contact Sales
             </Button>

@@ -1,4 +1,4 @@
-// filepath: /home/jai/Code/Notably/landing/src/pages/PrivacyPolicy.tsx
+// filepath: /home/jai/Code/Pensa/landing/src/pages/PrivacyPolicy.tsx
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { motion } from "framer-motion";
@@ -25,13 +25,13 @@ export default function PrivacyPolicy() {
         >
           <div className="flex items-center space-x-2 mb-8">
             <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-            <h1 className="text-4xl font-bold text-white">Notably Privacy Policy</h1>
+            <h1 className="text-4xl font-bold text-white">Pensa Privacy Policy</h1>
           </div>
           <p className="text-gray-400 mb-2">Effective Date: May 9, 2025</p>
           <p className="text-gray-400 mb-8">Last Updated: May 9, 2025</p>
           
           <p className="text-gray-300 mb-6">
-            At Notably, we care deeply about your privacy. This policy explains what we collect, why we collect it, and how we protect it.
+            At Pensa, we care deeply about your privacy. This policy explains what we collect, why we collect it, and how we protect it.
           </p>
         </motion.div>
 
@@ -200,7 +200,7 @@ export default function PrivacyPolicy() {
             <li className="flex items-start">
               <div className="mr-2 mt-1 min-w-4 h-1.5 w-1.5 rounded-full bg-purple-400/80"></div>
               <span className="text-gray-300">
-                You can contact us at <a href="mailto:notablyai@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">notablyai@gmail.com</a> for any privacy-related concerns.
+                You can contact us at <a href="mailto:Pensaai@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">Pensaai@gmail.com</a> for any privacy-related concerns.
               </span>
             </li>
           </ul>
@@ -221,13 +221,13 @@ export default function PrivacyPolicy() {
             <li className="flex items-start">
               <div className="mr-2 mt-1 min-w-4 h-1.5 w-1.5 rounded-full bg-purple-400/80"></div>
               <span className="text-gray-300">
-                We do not sell, rent, or share your personal data with third parties except as necessary to provide Notably's core services, comply with the law, or protect our rights.
+                We do not sell, rent, or share your personal data with third parties except as necessary to provide Pensa's core services, comply with the law, or protect our rights.
               </span>
             </li>
             <li className="flex items-start">
               <div className="mr-2 mt-1 min-w-4 h-1.5 w-1.5 rounded-full bg-purple-400/80"></div>
               <span className="text-gray-300">
-                We may share your data with trusted service providers (such as Appwrite for authentication and storage) strictly for the purpose of operating and improving Notably. These providers are contractually obligated to protect your information and use it only for the services we request.
+                We may share your data with trusted service providers (such as Appwrite for authentication and storage) strictly for the purpose of operating and improving Pensa. These providers are contractually obligated to protect your information and use it only for the services we request.
               </span>
             </li>
             <li className="flex items-start">
@@ -260,7 +260,7 @@ export default function PrivacyPolicy() {
             <li className="flex items-start">
               <div className="mr-2 mt-1 min-w-4 h-1.5 w-1.5 rounded-full bg-purple-400/80"></div>
               <span className="text-gray-300">
-                Notably's use and transfer of information received from Google APIs to any other app will adhere to Google API Services User Data Policy, including the Limited Use requirements.
+                Pensa's use and transfer of information received from Google APIs to any other app will adhere to Google API Services User Data Policy, including the Limited Use requirements.
               </span>
             </li>
             <li className="flex items-start">
@@ -290,7 +290,7 @@ export default function PrivacyPolicy() {
             We're committed to transparency and protecting your privacy. If you have any concerns or questions, please don't hesitate to reach out.
           </p>
           <a 
-            href="mailto:notablyai@gmail.com" 
+            href="mailto:Pensaai@gmail.com" 
             className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
           >
             Contact Our Privacy Team

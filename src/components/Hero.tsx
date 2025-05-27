@@ -9,22 +9,22 @@ const typewriterPhrases = [
 	{
 		title: "Remember",
 		description:
-			"Notably catches your ideas before they slip away. Jot, speak, or drop a thought—it's all saved, no judgment.",
+			"Pensa catches your ideas before they slip away. Jot, speak, or drop a thought—it's all saved, no judgment.",
 	},
 	{
 		title: "Focus",
 		description:
-			"No more digging for notes. Notably finds what matters, so you can get back to work (or life) faster.",
+			"No more digging for notes. Pensa finds what matters, so you can get back to work (or life) faster.",
 	},
 	{
 		title: "Move",
 		description:
-			"Turn scribbles into action. Notably turns your notes into tasks, so nothing gets lost in the shuffle.",
+			"Turn scribbles into action. Pensa turns your notes into tasks, so nothing gets lost in the shuffle.",
 	},
 	{
 		title: "Connect",
 		description:
-			"Your notes finally talk to each other. Notably links ideas, tasks, and reminders—automatically.",
+			"Your notes finally talk to each other. Pensa links ideas, tasks, and reminders—automatically.",
 	},
 ];
 
@@ -101,7 +101,7 @@ export function Hero() {
 					</div>
 
 					<h1 className="font-ntype text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent leading-relaxed pb-2">
-						<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Notably:</span> Notes that&nbsp;
+						<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Pensa:</span> Notes that&nbsp;
 						<span className="text-primary transition-colors duration-300 underline decoration-primary decoration-8 underline-offset-8 pb-1">
 							{displayText}
 						</span> with you
@@ -123,14 +123,14 @@ export function Hero() {
 							className="flex justify-center sm:justify-start mt-6 sm:mt-0"
 						>
 							<a
-								href="https://www.producthunt.com/posts/notably-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-notably&#0045;5"
+								href="https://www.producthunt.com/posts/Pensa-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-Pensa&#0045;5"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="transform hover:scale-105 transition-transform duration-300"
 							>
 								<img
 									src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=dark&t=1745053161436"
-									alt="Notably - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt"
+									alt="Pensa - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt"
 									width="250"
 									height="54"
 									className="hover:opacity-90 transition-opacity"

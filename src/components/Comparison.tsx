@@ -17,7 +17,7 @@ interface Competitor {
 
 const competitorsData: Competitor[] = [
   {
-    name: "Notably",
+    name: "Pensa",
     features: [
       { featureName: "AI Summaries", statusText: "Yes", iconType: 'check' },
       { featureName: "Auto Tagging", statusText: "Yes", iconType: 'check' },
@@ -73,10 +73,10 @@ export function Comparison() {
         className="max-w-7xl mx-auto"
       >
         <h2 className="font-ntype text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent text-center">
-          How Notably Compares
+          How Pensa Compares
         </h2>
         <p className="text-xl text-gray-300 mb-10 text-center max-w-2xl mx-auto">
-          See how Notably stacks up against other popular note-taking apps.
+          See how Pensa stacks up against other popular note-taking apps.
         </p>
         <div className="overflow-x-auto pb-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 min-w-[1000px] md:min-w-[calc(4*250px)]">

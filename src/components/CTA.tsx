@@ -38,7 +38,7 @@ export function CTA() {
             Get on the list. Don’t miss out.
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Notably is almost here. Sign up for early access and get perks you’ll brag about later.
+            Pensa is almost here. Sign up for early access and get perks you’ll brag about later.
           </p>
           
           <div className="max-w-md mx-auto mb-10">

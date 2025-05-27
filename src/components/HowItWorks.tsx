@@ -12,13 +12,13 @@ const howItWorks = [
 		icon: Tag,
 		title: "Auto Tagging",
 		description:
-			"Let Notably understand your notes and categorize them automatically for effortless organization.",
+			"Let Pensa understand your notes and categorize them automatically for effortless organization.",
 	},
 	{
 		icon: Mic,
 		title: "Voice to Text",
 		description:
-			"Capture ideas on the go — speak naturally and let Notably turn it into clean, searchable notes.",
+			"Capture ideas on the go — speak naturally and let Pensa turn it into clean, searchable notes.",
 	},
 	{
 		icon: CheckCircle,
@@ -55,10 +55,10 @@ export function HowItWorks() {
 				className="relative z-10 max-w-5xl mx-auto"
 			>
 				<h2 className="font-ntype text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-					How Notably Works
+					How Pensa Works
 				</h2>
 				<p className="text-lg text-gray-300 mb-10 max-w-2xl">
-					Notably uses AI to make your messy notes useful. Here's what happens
+					Pensa uses AI to make your messy notes useful. Here's what happens
 					behind the scenes:
 				</p>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-10">

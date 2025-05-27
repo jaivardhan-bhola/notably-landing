@@ -8,7 +8,7 @@ const benefits = [
 	{
 		icon: Star,
 		title: "Early Access",
-		description: "Be the first to try Notably. Shape the future with your feedback.",
+		description: "Be the first to try Pensa. Shape the future with your feedback.",
 	},
 	{
 		icon: Zap,
@@ -46,7 +46,7 @@ export function Benefits() {
 
 						<h2 className="font-ntype text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
 							<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
-								Why join Notably early?
+								Why join Pensa early?
 							</span>
 						</h2>
 						<p className="text-xl text-gray-300 mb-10">
