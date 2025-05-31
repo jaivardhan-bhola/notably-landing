@@ -28,7 +28,7 @@ const plans = [
   {
     name: "Plus",
     description: "For power users who need more",
-    price: "$3",
+    price: "₹250",
     features: [
       "250 notes",
       "25 summaries per week",
@@ -43,7 +43,7 @@ const plans = [
   {
     name: "Pro",
     description: "For teams and professionals who need the best",
-    price: "$5",
+    price: "₹400",
     features: [
       "Unlimited Notes",
       "50 summaries per week",
