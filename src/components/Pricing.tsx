@@ -102,14 +102,13 @@ export function Pricing() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
-          {plans.map((plan, index) => (
-            <motion.div
+          {plans.map((plan, index) => (            <motion.div
               key={plan.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative rounded-2xl p-8 border transition-all duration-300 hover:shadow-lg ${
+              className={`relative rounded-2xl p-8 border transition-all duration-300 hover:shadow-lg flex flex-col ${
                 plan.popular
                   ? "border-primary bg-gradient-to-b from-primary/5 to-primary/10 shadow-xl scale-105"
                   : "border-border bg-card hover:border-primary/50"
@@ -133,9 +132,7 @@ export function Pricing() {
                     <span className="text-muted-foreground">/month</span>
                   )}
                 </div>
-              </div>
-
-              <ul className="space-y-4 mb-8">
+              </div>              <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start space-x-3">
                     <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />

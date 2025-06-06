@@ -48,12 +48,11 @@ const howItWorks = [
 
 export function HowItWorks() {
 	const [currentSlide, setCurrentSlide] = useState(0);
-
 	// Auto-advance slideshow
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setCurrentSlide((prev) => (prev + 1) % howItWorks.length);
-		}, 5000); // Change slide every 5 seconds
+		}, 10000); // Change slide every 10 seconds
 		
 		return () => clearInterval(timer);
 	}, []);
@@ -105,21 +104,39 @@ export function HowItWorks() {
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0.95 }}
-						transition={{ duration: 0.5 }}
-						className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm h-[calc(100vh-250px)] min-h-[450px] flex items-center justify-center"
-					>
-						{/* Placeholder mockup - replace with actual mockups later */}
-						<div className="text-center">
-							<div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-3 mx-auto">
-								<currentItem.icon className="w-10 h-10 text-primary/70" />
+						transition={{ duration: 0.5 }}						className={`${
+							currentItem.mockup === "ai-summarization" || currentItem.mockup === "auto-tagging"
+								? "aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center w-full"
+								: "bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center"
+						}`}					>						{/* Show actual mockups for AI Summarization and Auto Tagging, placeholder for others */}						{currentItem.mockup === "ai-summarization" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/src/mockups/Summarizer.gif"
+									alt="AI Summarization Demo"
+									className="w-full h-full object-contain"
+								/>
 							</div>
-							<p className="text-gray-400 text-sm">
-								Mockup for {currentItem.title}
-							</p>
-							<p className="text-gray-500 text-xs mt-1">
-								Coming soon: Interactive demo
-							</p>
-						</div>
+						) : currentItem.mockup === "auto-tagging" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/src/mockups/AutoTagging.gif"
+									alt="Auto Tagging Demo"
+									className="w-full h-full object-contain"
+								/>
+							</div>
+						) : (
+							<div className="text-center">
+								<div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-3 mx-auto">
+									<currentItem.icon className="w-10 h-10 text-primary/70" />
+								</div>
+								<p className="text-gray-400 text-sm">
+									Mockup for {currentItem.title}
+								</p>
+								<p className="text-gray-500 text-xs mt-1">
+									Coming soon: Interactive demo
+								</p>
+							</div>
+						)}
 					</motion.div>
 
 					{/* Navigation arrows */}
