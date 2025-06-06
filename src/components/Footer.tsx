@@ -28,14 +28,18 @@ export function Footer() {
 				transition={{ duration: 0.5 }}
 				viewport={{ once: true }}
 				className="relative z-10 max-w-7xl mx-auto"
-			>
-				{/* Bottom section with copyright */}
+			>				{/* Bottom section with copyright */}
 				<div className="flex flex-col md:flex-row justify-between items-center gap-6">
 					<div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
-						<div>© {new Date().getFullYear()} Pagio. All rights reserved.</div>
-						<Link to="/privacy-policy" className="hover:text-white transition-colors">
+						<div>© {new Date().getFullYear()} Pagio. All rights reserved.</div>						<Link to="/privacy-policy" className="hover:text-white transition-colors">
 							Privacy Policy
 						</Link>
+						<a 
+							href="mailto:support@pagio.tech" 
+							className="hover:text-white transition-colors"
+						>
+							Contact Us
+						</a>
 					</div>
 					<div className="flex gap-3">
 						{socialLinks.map(({ icon: Icon, href, label }) => (

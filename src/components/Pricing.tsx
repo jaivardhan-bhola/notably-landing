@@ -1,6 +1,5 @@
 import { Check, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
 
 export function Pricing() {
@@ -36,12 +35,9 @@ export function Pricing() {
         "Sub-pages in Notes",
         "Draw with Excalidraw",
         "Daily Task Calendar",
-        "Multi-device Sync",
-        "Storage Limit: 500 notes"
+        "Multi-device Sync",        "Storage Limit: 500 notes"
       ],
-      popular: false,
-      cta: "Get Started",
-      variant: "outline" as const
+      popular: false
     },
     {
       name: "Plus",
@@ -54,12 +50,9 @@ export function Pricing() {
         "AI Tagging",
         "Google Calendar Integration",
         "Collaboration & Shared Notes",
-        "Export Notes (PDF/Markdown)",
-        "Storage Limit: 2,000 notes"
+        "Export Notes (PDF/Markdown)",        "Storage Limit: 2,000 notes"
       ],
-      popular: true,
-      cta: "Start Plus",
-      variant: "default" as const
+      popular: true
     },
     {
       name: "Pro",
@@ -71,12 +64,9 @@ export function Pricing() {
         "AI Summarization (Unlimited)",
         "Priority Support",
         "Fireflies (Auto Meeting Notes – when launched)",
-        "Themes / Customization (When launched)",
-        "Storage Limit: Unlimited"
+        "Themes / Customization (When launched)",        "Storage Limit: Unlimited"
       ],
-      popular: false,
-      cta: "Go Pro",
-      variant: "outline" as const
+      popular: false
     }
   ];
   return (
@@ -146,14 +136,6 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-
-              <Button 
-                className="w-full" 
-                variant={plan.variant}
-                size="lg"
-              >
-                {plan.cta}
-              </Button>
             </motion.div>
           ))}
         </div>
@@ -165,11 +147,9 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-muted-foreground mb-4">
-            All plans include a 14-day free trial. No credit card required.
-          </p>
+         
           <p className="text-sm text-muted-foreground">
-            Need something custom? <a href="#" className="text-primary hover:underline">Contact us</a> for enterprise pricing.
+            Need something custom? <a href="mailto:support@pagio.tech" className="text-primary hover:underline">Contact us</a> for enterprise pricing.
           </p>
         </motion.div>
       </div>

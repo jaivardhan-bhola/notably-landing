@@ -35,20 +35,29 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Empty left section to maintain spacing */}
-        <div></div>
-
-        {/* Desktop Navigation */}        <nav className="hidden md:flex items-center space-x-8">
-          <div className="flex space-x-6">
-            {["Home"].map((item) => (
-              <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled ? "text-muted-foreground hover:text-foreground" : "text-gray-300 hover:text-white"
-                }`}
-              >
-                {item}
-              </Link>
+        <div></div>        {/* Desktop Navigation */}        <nav className="hidden md:flex items-center space-x-8">
+          <div className="flex space-x-6">            {["Home", "Contact Us"].map((item) => (
+              item === "Contact Us" ? (
+                <a
+                  key={item}
+                  href="mailto:support@pagio.tech"
+                  className={`text-sm font-medium transition-colors ${
+                    isScrolled ? "text-muted-foreground hover:text-foreground" : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {item}
+                </a>
+              ) : (
+                <Link
+                  key={item}
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className={`text-sm font-medium transition-colors ${
+                    isScrolled ? "text-muted-foreground hover:text-foreground" : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {item}
+                </Link>
+              )
             ))}
           </div>
           <div className="flex items-center">
@@ -83,16 +92,26 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
-          >            <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">
-              {["Home"].map((item) => (
-                <Link
-                  key={item}
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                  className="text-lg font-medium py-2 border-b border-border/30 text-foreground"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item}
-                </Link>
+          >            <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">              {["Home", "Contact Us"].map((item) => (
+                item === "Contact Us" ? (
+                  <a
+                    key={item}
+                    href="mailto:support@pagio.tech"
+                    className="text-lg font-medium py-2 border-b border-border/30 text-foreground"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                ) : (
+                  <Link
+                    key={item}
+                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className="text-lg font-medium py-2 border-b border-border/30 text-foreground"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </Link>
+                )
               ))}
               <Button 
                 className="mt-4 w-full"

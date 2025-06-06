@@ -47,12 +47,11 @@ const howItWorks = [
 ];
 
 export function HowItWorks() {
-	const [currentSlide, setCurrentSlide] = useState(0);
-	// Auto-advance slideshow
+	const [currentSlide, setCurrentSlide] = useState(0);	// Auto-advance slideshow
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setCurrentSlide((prev) => (prev + 1) % howItWorks.length);
-		}, 10000); // Change slide every 10 seconds
+		}, 20000); // Change slide every 20 seconds
 		
 		return () => clearInterval(timer);
 	}, []);
@@ -105,10 +104,10 @@ export function HowItWorks() {
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0.95 }}
 						transition={{ duration: 0.5 }}						className={`${
-							currentItem.mockup === "ai-summarization" || currentItem.mockup === "auto-tagging"
+							currentItem.mockup === "ai-summarization" || currentItem.mockup === "auto-tagging" || currentItem.mockup === "canvas-sketching" || currentItem.mockup === "notes-subtasks" || currentItem.mockup === "calendar-integration" || currentItem.mockup === "chat-notes"
 								? "aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center w-full"
 								: "bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center"
-						}`}					>						{/* Show actual mockups for AI Summarization and Auto Tagging, placeholder for others */}						{currentItem.mockup === "ai-summarization" ? (
+						}`}>						{/* Show actual mockups for all features */}						{currentItem.mockup === "ai-summarization" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
 								<img
 									src="/mockups/Summarizer.gif"
@@ -121,6 +120,38 @@ export function HowItWorks() {
 								<img
 									src="/mockups/AutoTagging.gif"
 									alt="Auto Tagging Demo"
+									className="w-full h-full object-contain"
+								/>
+							</div>
+						) : currentItem.mockup === "canvas-sketching" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/mockups/Canvas.gif"
+									alt="Canvas & Sketching Demo"
+									className="w-full h-full object-contain"
+								/>
+							</div>
+						) : currentItem.mockup === "notes-subtasks" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/mockups/Subtasks.gif"
+									alt="Notes to Subtasks Demo"
+									className="w-full h-full object-contain"
+								/>
+							</div>
+						) : currentItem.mockup === "calendar-integration" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/mockups/Calendar.gif"
+									alt="Calendar Integration Demo"
+									className="w-full h-full object-contain"
+								/>
+							</div>
+						) : currentItem.mockup === "chat-notes" ? (
+							<div className="w-full h-full rounded-xl overflow-hidden">
+								<img
+									src="/mockups/Chat.gif"
+									alt="Chat with Notes Demo"
 									className="w-full h-full object-contain"
 								/>
 							</div>
