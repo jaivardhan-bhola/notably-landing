@@ -111,7 +111,7 @@ export function HowItWorks() {
 						}`}					>						{/* Show actual mockups for AI Summarization and Auto Tagging, placeholder for others */}						{currentItem.mockup === "ai-summarization" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
 								<img
-									src="/src/mockups/Summarizer.gif"
+									src="/mockups/Summarizer.gif"
 									alt="AI Summarization Demo"
 									className="w-full h-full object-contain"
 								/>
@@ -119,7 +119,7 @@ export function HowItWorks() {
 						) : currentItem.mockup === "auto-tagging" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
 								<img
-									src="/src/mockups/AutoTagging.gif"
+									src="/mockups/AutoTagging.gif"
 									alt="Auto Tagging Demo"
 									className="w-full h-full object-contain"
 								/>
