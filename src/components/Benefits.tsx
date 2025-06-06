@@ -42,18 +42,7 @@ export function Benefits() {
 						>
 							<Sparkles className="w-4 h-4 mr-2 text-yellow-400 animate-bounce" />
 							<span> Beta Launching June 2025</span>
-						</Badge>
-
-						<h2 className="font-ntype text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-							<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
-								Why join Pagio early?
-							</span>
-						</h2>
-						<p className="text-xl text-gray-300 mb-10">
-							Get in before the crowd. Help us build something you'll actually love.
-						</p>
-
-						<div className="space-y-8 mb-8">
+						</Badge>						<div className="space-y-8 mb-8">
 							{benefits.map((benefit, index) => (
 								<motion.div
 									key={benefit.title}
