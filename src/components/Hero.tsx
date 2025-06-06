@@ -9,22 +9,22 @@ const typewriterPhrases = [
 	{
 		title: "Remember",
 		description:
-			"Pensa catches your ideas before they slip away. Jot, speak, or drop a thought—it's all saved, no judgment.",
+			"Pagio catches your ideas before they slip away. Draw, sketch, or drop a thought—it's all saved, no judgment.",
 	},
 	{
 		title: "Focus",
 		description:
-			"No more digging for notes. Pensa finds what matters, so you can get back to work (or life) faster.",
+			"No more digging for notes. Pagio finds what matters, so you can get back to work (or life) faster.",
 	},
 	{
 		title: "Move",
 		description:
-			"Turn scribbles into action. Pensa turns your notes into tasks, so nothing gets lost in the shuffle.",
+			"Turn scribbles into action. Pagio turns your notes into tasks, so nothing gets lost in the shuffle.",
 	},
 	{
 		title: "Connect",
 		description:
-			"Your notes finally talk to each other. Pensa links ideas, tasks, and reminders—automatically.",
+			"Your notes finally talk to each other. Pagio links ideas, tasks, and reminders—automatically.",
 	},
 ];
 
@@ -101,18 +101,17 @@ export function Hero() {
 					</div>
 
 					<h1 className="font-ntype text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-white via-white/90 to-white/60 bg-clip-text text-transparent leading-relaxed pb-2">
-						<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Pensa:</span> Notes that&nbsp;
+						<span className="bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">Pagio:</span> Notes that&nbsp;
 						<span className="text-primary transition-colors duration-300 underline decoration-primary decoration-8 underline-offset-8 pb-1">
 							{displayText}
 						</span> with you
 					</h1>
 
-			
 					<p className="text-lg sm:text-xl text-gray-300 max-w-xl mt-4 sm:mt-6 mb-6 sm:mb-8 font-light leading-relaxed min-h-[6rem]">
 						{typewriterPhrases[currentPhraseIndex].description}
 					</p>
 
-					<div className="flex flex-col sm:flex-row gap-4 sm:items-center mb-6 sm:mb-10">
+					<div className="flex flex-col sm:flex-row gap-4 mb-6 sm:mb-10">
 						<InputWithButton />
 
 						{/* Product Hunt Badge */}
@@ -120,17 +119,17 @@ export function Hero() {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							transition={{ delay: 0.6, duration: 0.5 }}
-							className="flex justify-center sm:justify-start mt-6 sm:mt-0"
+							className="flex items-end justify-center sm:justify-start mt-6 sm:mt-0"
 						>
 							<a
-								href="https://www.producthunt.com/posts/Pensa-5?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-Pensa&#0045;5"
+								href="https://www.producthunt.com/products/notably-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-notably-5"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="transform hover:scale-105 transition-transform duration-300"
 							>
 								<img
 									src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=955074&theme=dark&t=1745053161436"
-									alt="Pensa - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt"
+									alt="Pagio - AI&#0032;notes&#0032;that&#0032;think&#0044;&#0032;link&#0044;&#0032;and&#0032;grow&#0032;with&#0032;you&#0046; | Product Hunt"
 									width="250"
 									height="54"
 									className="hover:opacity-90 transition-opacity"
@@ -151,7 +150,7 @@ export function Hero() {
 						</div>
 						<div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
 							<Code className="w-4 h-4 text-primary" />
-							<span> Talk, we’ll write</span>
+							<span> Canvas & create</span>
 						</div>
 						<div className="flex items-center space-x-2 bg-white/5 px-3 py-2 rounded-md">
 							<Zap className="w-4 h-4 text-primary" />

@@ -37,10 +37,9 @@ export function Header() {
         {/* Empty left section to maintain spacing */}
         <div></div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        {/* Desktop Navigation */}        <nav className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-6">
-            {["Home", "Pricing"].map((item) => (
+            {["Home"].map((item) => (
               <Link
                 key={item}
                 to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -84,9 +83,8 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
-          >
-            <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">
-              {["Home", "Pricing"].map((item) => (
+          >            <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">
+              {["Home"].map((item) => (
                 <Link
                   key={item}
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

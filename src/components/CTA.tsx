@@ -38,7 +38,7 @@ export function CTA() {
             Get on the list. Don’t miss out.
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Pensa is almost here. Sign up for early access and get perks you’ll brag about later.
+            Pagio is almost here. Sign up for early access and get perks you’ll brag about later.
           </p>
           
           <div className="max-w-md mx-auto mb-10">
@@ -49,10 +49,9 @@ export function CTA() {
             <div className="flex items-center">
               <span role="img" aria-label="sparkles"></span>
               <span className="ml-2">Instant summaries</span>
-            </div>
-            <div className="flex items-center">
-              <span role="img" aria-label="microphone"></span>
-              <span className="ml-2">Voice-to-note</span>
+            </div>            <div className="flex items-center">
+              <span role="img" aria-label="canvas"></span>
+              <span className="ml-2">Canvas & create</span>
             </div>
             <div className="flex items-center">
               <span role="img" aria-label="lightning"></span>

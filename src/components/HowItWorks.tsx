@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Tag, Mic, CheckCircle, Calendar, MessageSquare } from "lucide-react";
+import { Sparkles, Tag, PenTool, CheckCircle, Calendar, MessageSquare } from "lucide-react";
 
 const howItWorks = [
 	{
@@ -12,13 +12,12 @@ const howItWorks = [
 		icon: Tag,
 		title: "Auto Tagging",
 		description:
-			"Let Pensa understand your notes and categorize them automatically for effortless organization.",
-	},
-	{
-		icon: Mic,
-		title: "Voice to Text",
+			"Let Pagio understand your notes and categorize them automatically for effortless organization.",
+	},	{
+		icon: PenTool,
+		title: "Canvas & Sketching",
 		description:
-			"Capture ideas on the go — speak naturally and let Pensa turn it into clean, searchable notes.",
+			"Draw, sketch, and visualize your ideas — create diagrams, mind maps, and visual notes that bring thoughts to life.",
 	},
 	{
 		icon: CheckCircle,
@@ -55,10 +54,10 @@ export function HowItWorks() {
 				className="relative z-10 max-w-5xl mx-auto"
 			>
 				<h2 className="font-ntype text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
-					How Pensa Works
+					How Pagio Works
 				</h2>
 				<p className="text-lg text-gray-300 mb-10 max-w-2xl">
-					Pensa uses AI to make your messy notes useful. Here's what happens
+					Pagio uses AI to make your messy notes useful. Here's what happens
 					behind the scenes:
 				</p>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-10">

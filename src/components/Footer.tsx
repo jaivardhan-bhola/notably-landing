@@ -12,11 +12,11 @@ const socialLinks = [
 				</g>
 			</svg>
 		),
-		href: "https://www.producthunt.com/products/Pensa-3",
+		href: "https://www.producthunt.com/products/notably-3",
 		label: "Product Hunt",
 	},
-	{ icon: Instagram, href: "https://www.instagram.com/Pensa.ai/", label: "Instagram" },
-	{ icon: Linkedin, href: "https://www.linkedin.com/company/Pensa-ai-india/", label: "LinkedIn" },
+	{ icon: Instagram, href: "https://www.instagram.com/Pagio.ai/", label: "Instagram" },
+	{ icon: Linkedin, href: "https://www.linkedin.com/company/Pagio-ai-india/", label: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -32,7 +32,7 @@ export function Footer() {
 				{/* Bottom section with copyright */}
 				<div className="flex flex-col md:flex-row justify-between items-center gap-6">
 					<div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
-						<div>© {new Date().getFullYear()} Pensa. All rights reserved.</div>
+						<div>© {new Date().getFullYear()} Pagio. All rights reserved.</div>
 						<Link to="/privacy-policy" className="hover:text-white transition-colors">
 							Privacy Policy
 						</Link>

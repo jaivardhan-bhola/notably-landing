@@ -113,7 +113,7 @@ export function InteractiveDemo() {
           <div className="h-8 w-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
             <Sparkles className="h-4 w-4 text-white" />
           </div>
-          <span className="text-white font-medium">Pensa Demo</span>
+          <span className="text-white font-medium">Pagio Demo</span>
         </div>
         <div className="flex items-center space-x-2">
           <Button 
@@ -211,7 +211,7 @@ export function InteractiveDemo() {
                   >
                     <div className="flex items-center space-x-2 mb-2">
                       <Lightbulb className="h-4 w-4 text-primary" />
-                      <span className="text-primary font-medium">Pensa AI</span>
+                      <span className="text-primary font-medium">Pagio AI</span>
                     </div>
                     <div className="pl-6 whitespace-pre-line">
                       {typedResponse}
