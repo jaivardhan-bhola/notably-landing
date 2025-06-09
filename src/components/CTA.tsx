@@ -31,7 +31,7 @@ export function CTA() {
         >
           <div className="inline-flex items-center space-x-2 px-4 py-2 mb-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
             <span className="bg-primary rounded-full w-3 h-3 animate-pulse"></span>
-            <span className="text-sm font-medium">Beta opens June 2025</span>
+            <span className="text-sm font-medium">Beta out now</span>
           </div>
           
           <h2 className="font-ntype text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">

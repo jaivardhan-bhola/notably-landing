@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react"; // Import useState and useEffect
 
 // Google Form URL for signup
-const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
+const GOOGLE_FORM_URL = "https://app.pagio.tech";
 
 const initialPlans = [
 	{

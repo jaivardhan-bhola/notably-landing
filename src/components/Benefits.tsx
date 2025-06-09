@@ -41,7 +41,7 @@ export function Benefits() {
 							className="mb-6 px-4 py-2 border-white/10 bg-white/5 backdrop-blur-sm"
 						>
 							<Sparkles className="w-4 h-4 mr-2 text-yellow-400 animate-bounce" />
-							<span> Beta Launching June 2025</span>
+							<span> Beta Out Now</span>
 						</Badge>						<div className="space-y-8 mb-8">
 							{benefits.map((benefit, index) => (
 								<motion.div
@@ -84,13 +84,12 @@ export function Benefits() {
 										<div className="flex items-center gap-3">
 											<div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-800 flex items-center justify-center">
 												<Sparkles className="w-5 h-5 text-white" />
-											</div>
-											<div>
+											</div>											<div>
 												<h3 className="text-xl font-semibold text-white">
-													Join the beta waitlist
+													Try out Pagio
 												</h3>
 												<p className="text-sm text-gray-400">
-													Launching June 2025
+													Available now
 												</p>
 											</div>
 										</div>
@@ -99,7 +98,7 @@ export function Benefits() {
 									<div className="space-y-6 mb-8">
 										<div className="space-y-4">
 											{[
-												"Get notified when our beta launches in June 2025",
+												"Get notified when our beta launches - it's out now!",
 												"Early access to new features",
 												"Special offers for waitlist members",
 											].map((benefit, index) => (

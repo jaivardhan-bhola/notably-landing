@@ -3,7 +3,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { ArrowRight, AlertCircle } from "lucide-react";
 
 // Google Form URL
-const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
+const GOOGLE_FORM_URL = "https://app.pagio.tech";
 
 export function InputWithButton({ placeholder = "Enter your email" }) {
   const { toast } = useToast();
@@ -22,14 +22,13 @@ export function InputWithButton({ placeholder = "Enter your email" }) {
     <div className="flex flex-col w-full max-w-sm gap-2 relative">
       <div className="flex items-center text-amber-500 text-sm mb-2 animate-pulse">
         <AlertCircle className="h-4 w-4 mr-1" />
-        <span> Beta launching June 2025 — secure your spot now!</span>
+        <span> Beta out now — try it today!</span>
       </div>
       <Button 
         onClick={handleRedirect}
         className="w-full relative overflow-hidden group transition-all duration-300"
-      >
-        <span className="flex items-center justify-center">
-          Join the beta waitlist
+      >        <span className="flex items-center justify-center">
+          Try out Pagio
         </span>
       </Button>
     </div>

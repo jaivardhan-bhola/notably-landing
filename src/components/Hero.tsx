@@ -193,7 +193,7 @@ export function Hero() {
 			{/* Beta Launch Banner */}
 			<div className="absolute top-8 left-1/2 -translate-x-1/2 z-20">
 				<span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-base font-semibold text-white shadow-lg backdrop-blur-sm animate-pulse">
-					 Beta Launching June 2025
+					 Beta Out Now
 				</span>
 			</div>
 		</section>

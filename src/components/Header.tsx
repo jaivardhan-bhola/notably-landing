@@ -6,7 +6,7 @@ import { ContactForm } from "./ui/contact-form";
 import { Menu, X} from "lucide-react";
 
 // Google Form URL
-const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
+const GOOGLE_FORM_URL = "https://app.pagio.tech";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,12 +62,11 @@ export function Header() {
             ))}
           </div>
           <div className="flex items-center">
-            <Button 
-              variant="default" 
+            <Button              variant="default" 
               size="sm" 
               onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
             >
-              Join the beta waitlist
+              Try out Pagio
             </Button>
           </div>
         </nav>
@@ -119,11 +118,10 @@ export function Header() {
               <Button 
                 className="mt-4 w-full"
                 onClick={() => {
-                  window.open(GOOGLE_FORM_URL, '_blank');
-                  setIsMobileMenuOpen(false);
+                  window.open(GOOGLE_FORM_URL, '_blank');                setIsMobileMenuOpen(false);
                 }}
               >
-                Join the beta waitlist
+                Try out Pagio
               </Button>
             </div>          </motion.div>
         )}
