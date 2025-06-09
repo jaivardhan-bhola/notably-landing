@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import { ContactForm } from "./ui/contact-form";
 import { Menu, X} from "lucide-react";
 
 // Google Form URL
@@ -10,6 +11,7 @@ const GOOGLE_FORM_URL = "https://forms.gle/1BuVjhTxHwXqUFa87";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   // Handle scroll events to change header appearance
   useEffect(() => {
@@ -35,18 +37,17 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Empty left section to maintain spacing */}
-        <div></div>        {/* Desktop Navigation */}        <nav className="hidden md:flex items-center space-x-8">
-          <div className="flex space-x-6">            {["Home", "Contact Us"].map((item) => (
+        <div></div>        {/* Desktop Navigation */}        <nav className="hidden md:flex items-center space-x-8">          <div className="flex space-x-6">            {["Home", "Contact Us"].map((item) => (
               item === "Contact Us" ? (
-                <a
+                <button
                   key={item}
-                  href="mailto:support@pagio.tech"
+                  onClick={() => setIsContactFormOpen(true)}
                   className={`text-sm font-medium transition-colors ${
                     isScrolled ? "text-muted-foreground hover:text-foreground" : "text-gray-300 hover:text-white"
                   }`}
                 >
                   {item}
-                </a>
+                </button>
               ) : (
                 <Link
                   key={item}
@@ -94,14 +95,16 @@ export function Header() {
             className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
           >            <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col space-y-4">              {["Home", "Contact Us"].map((item) => (
                 item === "Contact Us" ? (
-                  <a
+                  <button
                     key={item}
-                    href="mailto:support@pagio.tech"
-                    className="text-lg font-medium py-2 border-b border-border/30 text-foreground"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      setIsContactFormOpen(true);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="text-lg font-medium py-2 border-b border-border/30 text-foreground text-left"
                   >
                     {item}
-                  </a>
+                  </button>
                 ) : (
                   <Link
                     key={item}
@@ -122,10 +125,15 @@ export function Header() {
               >
                 Join the beta waitlist
               </Button>
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Contact Form Modal */}
+      <ContactForm 
+        isOpen={isContactFormOpen} 
+        onClose={() => setIsContactFormOpen(false)} 
+      />
     </header>
   );
 }

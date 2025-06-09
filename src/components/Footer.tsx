@@ -1,6 +1,8 @@
 import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // Added import
+import { Link } from "react-router-dom";
+import { ContactForm } from "./ui/contact-form";
+import { useState } from "react";
 
 const socialLinks = [
 	{
@@ -20,6 +22,8 @@ const socialLinks = [
 ];
 
 export function Footer() {
+	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
 	return (
 		<footer className="relative py-6 px-4 overflow-hidden text-white">
 			<motion.div
@@ -34,12 +38,12 @@ export function Footer() {
 						<div>© {new Date().getFullYear()} Pagio. All rights reserved.</div>						<Link to="/privacy-policy" className="hover:text-white transition-colors">
 							Privacy Policy
 						</Link>
-						<a 
-							href="mailto:support@pagio.tech" 
+						<button 
+							onClick={() => setIsContactFormOpen(true)}
 							className="hover:text-white transition-colors"
 						>
 							Contact Us
-						</a>
+						</button>
 					</div>
 					<div className="flex gap-3">
 						{socialLinks.map(({ icon: Icon, href, label }) => (
@@ -53,10 +57,15 @@ export function Footer() {
 							>
 								<Icon className="w-4 h-4" />
 							</a>
-						))}
-					</div>
+						))}					</div>
 				</div>
 			</motion.div>
+
+			{/* Contact Form Modal */}
+			<ContactForm 
+				isOpen={isContactFormOpen} 
+				onClose={() => setIsContactFormOpen(false)} 
+			/>
 		</footer>
 	);
 }
