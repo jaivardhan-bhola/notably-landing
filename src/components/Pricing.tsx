@@ -1,10 +1,12 @@
 import { Check, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { ContactForm } from "./ui/contact-form";
 
 export function Pricing() {
   const [isIndia, setIsIndia] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
     const detectLocation = async () => {
@@ -147,11 +149,16 @@ export function Pricing() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-         
-          <p className="text-sm text-muted-foreground">
-            Need something custom? <a href="mailto:support@pagio.tech" className="text-primary hover:underline">Contact us</a> for enterprise pricing.
+           <p className="text-sm text-muted-foreground">
+            Need something custom? <button onClick={() => setIsContactFormOpen(true)} className="text-primary hover:underline">Contact us</button> for enterprise pricing.
           </p>
         </motion.div>
+
+        {/* Contact Form Modal */}
+        <ContactForm 
+          isOpen={isContactFormOpen} 
+          onClose={() => setIsContactFormOpen(false)} 
+        />
       </div>
     </section>
   );
