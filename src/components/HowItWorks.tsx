@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Sparkles, Tag, PenTool, CheckCircle, Calendar, MessageSquare, ChevronLeft, ChevronRight } from "lucide-react";
+import { Sparkles, Tag, PenTool, CheckCircle, Calendar, MessageSquare, ChevronLeft, ChevronRight, Video } from "lucide-react";
 
 const howItWorks = [
 	{
@@ -109,50 +109,62 @@ export function HowItWorks() {
 								: "bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center"
 						}`}>						{/* Show actual mockups for all features */}						{currentItem.mockup === "ai-summarization" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/Summarizer.gif"
-									alt="AI Summarization Demo"
+								<video
+									src="/mockups/Summarizer.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : currentItem.mockup === "auto-tagging" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/AutoTagging.gif"
-									alt="Auto Tagging Demo"
+								<video
+									src="/mockups/AutoTagging.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : currentItem.mockup === "canvas-sketching" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/Canvas.gif"
-									alt="Canvas & Sketching Demo"
+								<video
+									src="/mockups/Canvas.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : currentItem.mockup === "notes-subtasks" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/Subtasks.gif"
-									alt="Notes to Subtasks Demo"
+								<video
+									src="/mockups/Subtasks.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : currentItem.mockup === "calendar-integration" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/Calendar.gif"
-									alt="Calendar Integration Demo"
+								<video
+									src="/mockups/Calendar.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : currentItem.mockup === "chat-notes" ? (
 							<div className="w-full h-full rounded-xl overflow-hidden">
-								<img
-									src="/mockups/Chat.gif"
-									alt="Chat with Notes Demo"
+								<video
+									src="/mockups/Chat.mp4"
 									className="w-full h-full object-contain"
+									autoPlay
+									loop
+									muted
 								/>
 							</div>
 						) : (
