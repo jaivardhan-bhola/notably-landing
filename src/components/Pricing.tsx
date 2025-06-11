@@ -70,10 +70,9 @@ export function Pricing() {
       ],
       popular: false
     }
-  ];
-  return (
-    <section className="py-20 px-4 sm:px-6 text-white">
-      <div className="max-w-7xl mx-auto">
+  ];  return (
+    <section id="pricing" className="py-20 px-4 sm:px-6 text-white">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,59 +86,100 @@ export function Pricing() {
             Choose the plan that fits your workflow. Start free, upgrade when you need more.
           </p>
           {loading && (
-            <div className="text-sm text-muted-foreground mt-2">
+            <div className="text-sm text-gray-400 mt-2">
               Loading pricing for your region...
             </div>
           )}
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-6">
-          {plans.map((plan, index) => (            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className={`relative rounded-2xl p-8 border transition-all duration-300 hover:shadow-lg flex flex-col ${
-                plan.popular
-                  ? "border-primary bg-gradient-to-b from-primary/5 to-primary/10 shadow-xl scale-105"
-                  : "border-border bg-card hover:border-primary/50"
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center space-x-1 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
-                    <Star className="w-4 h-4" />
-                    <span>Most Popular</span>
-                  </span>
-                </div>
-              )}              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className="text-muted-foreground mb-4">{plan.description}</p>
-                <div className="mb-2">
-                  <span className="text-4xl font-bold">
-                    {isIndia ? plan.priceINR : plan.priceUSD}
-                  </span>
-                  {(isIndia ? plan.priceINR : plan.priceUSD) !== (isIndia ? "₹0" : "$0") && (
-                    <span className="text-muted-foreground">/month</span>
+        </motion.div>        <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:gap-4">
+          {plans.map((plan, index) => {
+            const isMiddle = index === 1;
+            return (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative w-full max-w-sm ${
+                  isMiddle ? 'lg:transform lg:scale-105 lg:z-10' : 'lg:z-0'
+                }`}
+              >
+                <div
+                  className={`relative rounded-3xl p-8 border transition-all duration-300 hover:shadow-2xl flex flex-col h-[600px] ${
+                    isMiddle
+                      ? "bg-gradient-to-br from-purple-600/20 via-blue-600/20 to-purple-800/20 border-purple-500/50 shadow-2xl backdrop-blur-xl"
+                      : "bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:border-gray-600/50"
+                  }`}
+                >
+                  {isMiddle && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <span className="inline-flex items-center space-x-1 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold">
+                        <Star className="w-4 h-4" />
+                        <span>POPULAR</span>
+                      </span>
+                    </div>
                   )}
+
+                  {/* Plan Header */}
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-bold mb-2 text-white">{plan.name}</h3>                    <div className="mb-4">
+                      <div className="flex items-center justify-center">
+                        <div className="flex items-baseline">
+                          <span className="text-2xl font-bold text-white mr-1">
+                            {isIndia ? '₹' : '$'}
+                          </span>
+                          <span className="text-5xl font-bold text-white">
+                            {isIndia 
+                              ? plan.priceINR.replace('₹', '') 
+                              : plan.priceUSD.replace('$', '')
+                            }
+                          </span>
+                        </div>
+                        {(isIndia ? plan.priceINR : plan.priceUSD) !== (isIndia ? "₹0" : "$0") && (
+                          <span className="text-sm text-gray-400 ml-2">per month</span>
+                        )}
+                      </div>
+                    </div>
+                    <p className="text-gray-400 text-sm">{plan.description}</p>
+                  </div>
+
+                  {/* Get Started Button */}
+                  <div className="mb-8">
+                    <button
+                      className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                        isMiddle
+                          ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 shadow-lg"
+                          : "bg-gray-800 text-white hover:bg-gray-700 border border-gray-600"
+                      }`}
+                    >
+                      Get started
+                    </button>
+                  </div>                  {/* Features Section */}
+                  <div className="flex-grow overflow-y-auto">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wider">
+                      FEATURES
+                    </h4>
+                    <ul className="space-y-3 min-h-[200px]">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start space-x-3">
+                          <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                            isMiddle ? 'text-purple-400' : 'text-green-400'
+                          }`} />
+                          <span className={`text-sm ${
+                            feature.includes("Everything in") 
+                              ? "font-medium text-white" 
+                              : "text-gray-300"
+                          }`}>
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>              <ul className="space-y-4 mb-8 flex-grow">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start space-x-3">
-                    <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className={`text-sm ${
-                      feature.includes("Everything in") 
-                        ? "font-medium text-foreground" 
-                        : "text-muted-foreground"
-                    }`}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div

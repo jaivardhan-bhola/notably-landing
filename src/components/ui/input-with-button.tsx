@@ -21,8 +21,8 @@ export function InputWithButton({ placeholder = "Enter your email" }) {
   return (
     <div className="flex flex-col w-full max-w-sm gap-2 relative">
       <div className="flex items-center text-amber-500 text-sm mb-2 animate-pulse">
-        <AlertCircle className="h-4 w-4 mr-1" />
-        <span> Beta out now — try it today!</span>
+        {/* <AlertCircle className="h-4 w-4 mr-1" /> */}
+        <span> </span>
       </div>
       <Button 
         onClick={handleRedirect}

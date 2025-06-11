@@ -62,9 +62,8 @@ const competitorsData: Competitor[] = [
   }
 ];
 
-export function Comparison() {
-  return (
-    <section className="relative py-24 px-4 overflow-hidden text-white">
+export function Comparison() {  return (
+    <section id="comparison" className="relative py-24 px-4 overflow-hidden text-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -63,21 +63,30 @@ export function HowItWorks() {
 	const prevSlide = () => {
 		setCurrentSlide((prev) => (prev - 1 + howItWorks.length) % howItWorks.length);
 	};
-	const currentItem = howItWorks[currentSlide];	return (
-		<section
+	const currentItem = howItWorks[currentSlide];	return (		<section
 			id="how-it-works"
-			className="relative h-screen flex items-center px-4 overflow-hidden text-white rounded-2xl"
+			className="relative min-h-screen py-12 px-4 text-white rounded-2xl"
 		>
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7 }}
 				viewport={{ once: true }}
-				className="relative z-10 max-w-5xl mx-auto w-full"
-			>				<h2 className="font-ntype text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent text-center">
+				className="relative z-10 max-w-5xl mx-auto w-full h-full flex flex-col"
+			><h2 className="font-ntype text-2xl md:text-3xl font-bold mb-6 bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent text-center">
 					How Pagio Works
-				</h2>				{/* Feature boxes navigation */}
-				<div className="flex flex-wrap justify-center gap-2 mb-6">					{howItWorks.map((item, idx) => (
+				</h2>
+				
+				<div className="max-w-3xl mx-auto mb-8">
+					<p className="text-gray-300 text-center text-lg leading-relaxed">
+						Discover how Pagio transforms your note-taking experience with powerful AI features. 
+						Explore each capability through interactive demos and see how our intelligent tools help you 
+						capture, organize, and leverage your ideas more effectively than ever before.
+					</p>
+				</div>
+
+				{/* Feature boxes navigation */}
+				<div className="flex flex-wrap justify-center gap-2 mb-6">{howItWorks.map((item, idx) => (
 						<button
 							key={item.title}
 							onClick={() => setCurrentSlide(idx)}
@@ -98,17 +107,16 @@ export function HowItWorks() {
 						
 						</button>
 					))}				</div>				{/* Mockup area */}
-				<div className="relative flex-1">					<motion.div
+				<div className="relative h-[400px] mb-8"><motion.div
 						key={currentSlide}
 						initial={{ opacity: 0, scale: 0.95 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0.95 }}
 						transition={{ duration: 0.5 }}						className={`${
 							currentItem.mockup === "ai-summarization" || currentItem.mockup === "auto-tagging" || currentItem.mockup === "canvas-sketching" || currentItem.mockup === "notes-subtasks" || currentItem.mockup === "calendar-integration" || currentItem.mockup === "chat-notes"
-								? "aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center w-full"
-								: "bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm aspect-video max-h-[calc(100vh-300px)] min-h-[400px] flex items-center justify-center"
-						}`}>						{/* Show actual mockups for all features */}						{currentItem.mockup === "ai-summarization" ? (
-							<div className="w-full h-full rounded-xl overflow-hidden">
+								? "aspect-video h-full w-full flex items-center justify-center"
+								: "bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm aspect-video h-full flex items-center justify-center"
+						}`}>						{/* Show actual mockups for all features */}						{currentItem.mockup === "ai-summarization" ? (							<div className="w-full max-h-[400px] rounded-xl overflow-hidden">
 								<video
 									src="/mockups/Summarizer.mp4"
 									className="w-full h-full object-contain"
@@ -117,8 +125,7 @@ export function HowItWorks() {
 									muted
 								/>
 							</div>
-						) : currentItem.mockup === "auto-tagging" ? (
-							<div className="w-full h-full rounded-xl overflow-hidden">
+						) : currentItem.mockup === "auto-tagging" ? (							<div className="w-full max-h-[400px] rounded-xl overflow-hidden">
 								<video
 									src="/mockups/AutoTagging.mp4"
 									className="w-full h-full object-contain"
@@ -127,8 +134,7 @@ export function HowItWorks() {
 									muted
 								/>
 							</div>
-						) : currentItem.mockup === "canvas-sketching" ? (
-							<div className="w-full h-full rounded-xl overflow-hidden">
+						) : currentItem.mockup === "canvas-sketching" ? (							<div className="w-full max-h-[400px] rounded-xl overflow-hidden">
 								<video
 									src="/mockups/Canvas.mp4"
 									className="w-full h-full object-contain"
@@ -137,8 +143,7 @@ export function HowItWorks() {
 									muted
 								/>
 							</div>
-						) : currentItem.mockup === "notes-subtasks" ? (
-							<div className="w-full h-full rounded-xl overflow-hidden">
+						) : currentItem.mockup === "notes-subtasks" ? (							<div className="w-full max-h-[400px] rounded-xl overflow-hidden">
 								<video
 									src="/mockups/Subtasks.mp4"
 									className="w-full h-full object-contain"
@@ -210,6 +215,13 @@ export function HowItWorks() {
 
 				<div className="mt-4 text-xs text-gray-400 text-center">
 					Your notes stay private — nothing is used to train models.
+				</div>
+
+				{/* Try out Pagio button */}
+				<div className="mt-6 text-center">
+					<button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+						Try out Pagio
+					</button>
 				</div>
 			</motion.div>
 		</section>

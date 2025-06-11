@@ -2,7 +2,7 @@ import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ContactForm } from "./ui/contact-form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const socialLinks = [
 	{
@@ -23,41 +23,124 @@ const socialLinks = [
 
 export function Footer() {
 	const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+	const scrollToSection = (sectionId: string) => {
+		// Check if we're on the home page
+		if (window.location.pathname === '/') {
+			// We're on the home page, just scroll
+			const element = document.getElementById(sectionId);
+			if (element) {
+				element.scrollIntoView({ 
+					behavior: 'smooth',
+					block: 'start'
+				});
+			}
+		} else {
+			// We're on a different page, navigate to home with hash
+			window.location.href = `/#${sectionId}`;
+		}
+	};
 
 	return (
-		<footer className="relative py-6 px-4 overflow-hidden text-white">
+		<footer className="relative py-12 px-4 overflow-hidden text-white">
 			<motion.div
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
 				viewport={{ once: true }}
-				className="relative z-10 max-w-7xl mx-auto"
-			>				{/* Bottom section with copyright */}
-				<div className="flex flex-col md:flex-row justify-between items-center gap-6">
-					<div className="flex flex-col md:flex-row items-center gap-4 text-sm text-gray-500">
-						<div>© {new Date().getFullYear()} Pagio. All rights reserved.</div>						<Link to="/privacy-policy" className="hover:text-white transition-colors">
-							Privacy Policy
-						</Link>
-						<button 
-							onClick={() => setIsContactFormOpen(true)}
-							className="hover:text-white transition-colors"
-						>
-							Contact Us
-						</button>
+				className="relative z-10 max-w-7xl mx-auto"			>				{/* Main footer content */}
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+					{/* Brand and description */}
+					<div className="col-span-1 md:col-span-1">
+						<div className="text-xl font-bold mb-4">Pagio</div>
+						<p className="text-gray-400 text-sm leading-relaxed">
+							AI-powered productivity tools that help you organize, manage, and optimize your workflow effortlessly.
+						</p>
 					</div>
-					<div className="flex gap-3">
-						{socialLinks.map(({ icon: Icon, href, label }) => (
-							<a
-								key={label}
-								href={href}
-								aria-label={label}
-								className="w-9 h-9 flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/5 border border-white/5 hover:border-white/20 rounded-lg transition-colors"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Icon className="w-4 h-4" />
-							</a>
-						))}					</div>
+
+					{/* Product links */}					<div>
+						<h3 className="text-white font-semibold mb-4">Product</h3>						<ul className="space-y-3 text-sm">
+							<li>
+								<button 
+									onClick={() => scrollToSection('comparison')}
+									className="text-gray-400 hover:text-white transition-colors text-left"
+								>
+									Comparison
+								</button>
+							</li>
+							<li>
+								<button 
+									onClick={() => scrollToSection('pricing')}
+									className="text-gray-400 hover:text-white transition-colors text-left"
+								>
+									Pricing
+								</button>
+							</li>
+							<li>
+								<button 
+									onClick={() => scrollToSection('how-it-works')}
+									className="text-gray-400 hover:text-white transition-colors text-left"
+								>
+									How It Works
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					{/* Legal and Social */}
+					<div>						<h3 className="text-white font-semibold mb-4">Connect</h3>
+						<ul className="space-y-3 text-sm mb-6">
+							<li>
+								<button 
+									onClick={() => setIsContactFormOpen(true)}
+									className="text-gray-400 hover:text-white transition-colors text-left"
+								>
+									Contact Us
+								</button>
+							</li>
+							<li>
+								<Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+									Privacy Policy
+								</Link>
+							</li>
+							<li>
+								<Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+									Terms of Service
+								</Link>
+							</li>
+						</ul>
+						
+						{/* Social links */}
+						<div className="flex gap-3">
+							{socialLinks.map(({ icon: Icon, href, label }) => (
+								<a
+									key={label}
+									href={href}
+									aria-label={label}
+									className="w-9 h-9 flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/5 border border-white/5 hover:border-white/20 rounded-lg transition-colors"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Icon className="w-4 h-4" />
+								</a>
+							))}
+						</div>
+					</div>
+				</div>
+
+				{/* Bottom section with copyright */}
+				<div className="pt-8 border-t border-white/10">
+					<div className="flex flex-col md:flex-row justify-between items-center gap-4">
+						<div className="text-sm text-gray-400">
+							© {new Date().getFullYear()} Pagio. All rights reserved.
+						</div>						<div className="flex flex-wrap gap-6 text-sm text-gray-400">
+							<Link to="/privacy-policy" className="hover:text-white transition-colors">
+								Privacy
+							</Link>
+							<Link to="/terms" className="hover:text-white transition-colors">
+								Terms
+							</Link>
+						</div>
+					</div>
 				</div>
 			</motion.div>
 
