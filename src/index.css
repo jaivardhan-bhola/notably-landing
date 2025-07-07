@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables and base styles */
+@layer base {
+  :root {
+    /* Use dark theme values directly in root */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 248 90% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s steps(1) infinite;
+}
+
+/* Subtle animated bokeh background with small radial circles */
+.glass-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.glass-bg .bokeh {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(32px) saturate(1.2);
+  opacity: 0.28;
+  pointer-events: none;
+  animation: bokeh-move 12s ease-in-out infinite alternate;
+  transition: opacity 0.5s;
+  /* outline: 1px solid #fff2; */ /* Uncomment for debugging */
+}
+.glass-bg .bokeh1 {
+  width: 160px; height: 160px;
+  left: 8vw; top: 15vh;
+  background: radial-gradient(circle, hsl(248,90%,66%,0.55) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+.glass-bg .bokeh2 {
+  width: 120px; height: 120px;
+  left: 60vw; top: 8vh;
+  background: radial-gradient(circle, hsl(240,100%,70%,0.38) 0%, transparent 70%);
+  animation-delay: 2s;
+}
+.glass-bg .bokeh3 {
+  width: 140px; height: 140px;
+  left: 35vw; top: 70vh;
+  background: radial-gradient(circle, hsl(0,0%,98%,0.22) 0%, transparent 70%);
+  animation-delay: 4s;
+}
+.glass-bg .bokeh4 {
+  width: 100px; height: 100px;
+  left: 80vw; top: 60vh;
+  background: radial-gradient(circle, hsl(248,90%,66%,0.32) 0%, transparent 70%);
+  animation-delay: 1s;
+}
+.glass-bg .bokeh5 {
+  width: 90px; height: 90px;
+  left: 22vw; top: 55vh;
+  background: radial-gradient(circle, hsl(240,100%,40%,0.25) 0%, transparent 70%);
+  animation-delay: 3s;
+}
+@keyframes bokeh-move {
+  0% { transform: translateY(0) scale(1); opacity: 0.28; }
+  100% { transform: translateY(-40px) scale(1.12); opacity: 0.36; }
+}
+
+/* Ensure all main content is above the background */
+body > *:not(.glass-bg) {
+  position: relative;
+  z-index: 1;
+}
